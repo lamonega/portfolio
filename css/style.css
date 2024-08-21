@@ -1,31 +1,35 @@
+/* General Styles */
 body {
   font-family: "Tahoma", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #e8f0f2;
 }
 
+/* Navigation Links */
 nav > a {
   margin: 0.5rem;
-  color: #007bff;
+  color: #6c9bb3;
   font-weight: bold;
   font-style: italic;
   text-decoration: none;
 }
 
 nav > a:hover {
-  color: #0056b3;
+  color: #4a7a9c;
   text-decoration: underline;
 }
 
 nav > a:active {
-  color: cyan;
+  color: #007f8c;
 }
 
+/* Flex Container */
 .flex-container {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0rem;
 }
 
 @media (min-width: 56rem) {
@@ -34,9 +38,13 @@ nav > a:active {
   }
 }
 
+/* Sidebar */
 .sidebar {
   flex: 0 1 250px;
-  margin: 1rem 0 2rem;
+  margin: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 .info {
@@ -44,24 +52,33 @@ nav > a:active {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 1rem;
 }
 
 .info > img {
   height: 180px;
-  width: 190px;
+  width: 180px;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
 
+/* Main Content */
 .main-content {
   flex: 3;
   margin: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
 }
 
 .title > h2 {
   margin-top: 0;
+  font-size: 2rem;
+  color: #4a6e74;
 }
 
+/* Card Styles */
 .wrap-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -69,10 +86,16 @@ nav > a:active {
 }
 
 .card {
-  border: 1px solid #ddd;
+  border: 1px solid #d0d9dd;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  background-color: #f5f9fa;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
 }
 
 .card-img {
@@ -93,19 +116,22 @@ nav > a:active {
 
 .card-title {
   font-size: 1.5rem;
+  font-weight: bold;
+  color: #3a5d6f;
 }
 
 .card-subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: #6b8a9d;
 }
 
 .card-description {
   font-size: 1rem;
-  color: #333;
+  color: #4a6e74;
   margin-top: 1rem;
 }
 
+/* Buttons */
 .card-buttons {
   display: flex;
   justify-content: center;
@@ -113,15 +139,16 @@ nav > a:active {
 }
 
 .btn {
-  background-color: #007bff;
-  color: white;
+  background-color: #6c9bb3;
+  color: #ffffff;
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 4px;
   text-align: center;
   font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #4a7a9c;
 }
